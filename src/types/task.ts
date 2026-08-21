@@ -6,19 +6,19 @@ export type Accent = (typeof ACCENTS)[number];
 export interface Task {
   id: string;
   title: string;
-  description?: string;
-  dueDate?: string; // ISO date (yyyy-MM-dd)
-  reminder?: string; // HH:mm
+  description?: string | undefined;
+  dueDate?: string | undefined; // ISO date (yyyy-MM-dd)
+  reminder?: string | undefined; // HH:mm
   priority: Priority;
   category: string;
   tags: string[];
   accent: Accent;
   important: boolean;
   completed: boolean;
-  completedAt?: string;
+  completedAt?: string | undefined;
   createdAt: string;
   order: number;
-  demo?: boolean;
+  demo?: boolean | undefined;
 }
 
 export interface Category {
